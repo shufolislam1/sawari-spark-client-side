@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Tire",
+        "img": "https://i.ibb.co/SBfHCBL/tire.jpg",
+        "short_description": "We got any kind of tire and we supply various companys tire.Including Yamaha, TVS, Bajaj, Suzuki etc",
+        "minimum_order_quantity": "100",
+        "available_quantity": "10000",
+        "price_per_unit": "$250"
+    },
+    {
+        "name": "LED Head Light",
+        "img": "https://i.ibb.co/hR7Y66z/led-light.jpg",
+        "short_description": "We got any kind of Head Light and we supply various companys Head Light.Including Yamaha, TVS, Bajaj, Suzuki etc",
+        "minimum_order_quantity": "120",
+        "available_quantity": "6000",
+        "price_per_unit": "$150"
+    },
+    {
+        "name": "Hidrolic Break",
+        "img": "https://i.ibb.co/Qj5Zp3p/braking-system.jpg",
+        "short_description": "We got any kind of Hidrolic Break and we supply various companys Hidrolic Break.Including Yamaha, TVS, Bajaj, Suzuki etc",
+        "minimum_order_quantity": "200",
+        "available_quantity": "7000",
+        "price_per_unit": "$350"
+    },
+    {
+        "name": "Chain",
+        "img": "https://i.ibb.co/YfK5Tmk/chain.jpg",
+        "short_description": "We got any kind of Chain and we supply various companys Chain.Including Yamaha, TVS, Bajaj, Suzuki etc",
+        "minimum_order_quantity": "150",
+        "available_quantity": "11000",
+        "price_per_unit": "$220"
+    },
+    {
+        "name": "Meter",
+        "img": "https://i.ibb.co/6gRWxcj/meter.jpg",
+        "short_description": "We got any kind of Meter and we supply various companys Meter.Including Yamaha, TVS, Bajaj, Suzuki etc",
+        "minimum_order_quantity": "100",
+        "available_quantity": "12000",
+        "price_per_unit": "$130"
+    },
+    {
+        "name": "Engine Oil",
+        "img": "https://i.ibb.co/DQptdnY/engine-oil.jpg",
+        "short_description": "We got any kind of Engine Oil and we supply various companys Engine Oil.Including Yamaha, TVS, Bajaj, Suzuki etc",
+        "minimum_order_quantity": "400",
+        "available_quantity": "16000",
+        "price_per_unit": "$50"
+    }
+]

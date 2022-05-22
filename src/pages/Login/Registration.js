@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
-import auth from '../../firebase.ininit';
+import auth from '../../firebase.init';
 
 
 const Register = () => {
@@ -69,7 +69,7 @@ const Register = () => {
                                 {...register("email",
                                     {
                                         pattern: {
-                                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                            // value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
                                             message: 'Provide a valid email'
                                         }
                                     },
