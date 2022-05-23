@@ -1,7 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddReview from './pages/BookOrder/AddReview';
 import BookOrder from './pages/BookOrder/BookOrder';
 import DashBoard from './pages/BookOrder/DashBoard';
+import MyOrders from './pages/BookOrder/MyOrders';
+import MyProfile from './pages/BookOrder/MyProfile';
 import Header from './pages/Home/Header';
 import Home from './pages/Home/Home'
 import Reviews from './pages/Home/Reviews';
@@ -21,7 +24,11 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/bookorder' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
-        <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}></Route>
+        <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
+            <Route index element={<MyProfile></MyProfile>}></Route>
+            <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
+            <Route path='addreview' element={<AddReview></AddReview>}></Route>
+        </Route>
         <Route path='/spark/:sparkId' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
