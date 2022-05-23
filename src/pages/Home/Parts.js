@@ -5,13 +5,13 @@ const Parts = () => {
     const [parts, setParts] = useState()
 
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/spark')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])
     return (
-        <div>
-            <h2 className='text-4xl font-bold ml-auto'>Tools</h2>
+        <div className='grid'>
+            <h2 className='text-4xl font-bold justify-self-center mt-4'>Tools</h2>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-8'>
                 {
                     parts?.map(part => <Part

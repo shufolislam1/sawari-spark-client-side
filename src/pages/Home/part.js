@@ -1,12 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const part = ({ part }) => {
-    // const navigate = useNavigate();
-    // const handleBookOrder = () => {
-    //     navigate('/bookorder')
-    // }
-    // const navigate = useNavigate()
+
     return (
         <div>
             <div class="card bg-base-100 shadow-xl">
