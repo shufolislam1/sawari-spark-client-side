@@ -7,6 +7,7 @@ const Header = () => {
         {/* <li><Link to='/About'>About</Link></li> */}
         <li><Link to='/reviews'>Reviews</Link></li>
         {/* <li><Link to='/contactus'>Contact Us</Link></li> */}
+        <li><Link to='/bookorder'>Book Order</Link></li>
         <li><Link to='/register'>Register</Link></li>
         <li><Link to='/login'>Login</Link></li>
         {/* <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li> */}
@@ -22,7 +23,7 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a class="btn btn-ghost normal-case text-xl">SAWARI SPARK</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">

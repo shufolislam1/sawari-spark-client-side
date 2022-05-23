@@ -12,7 +12,7 @@ const Parts = () => {
     return (
         <div>
             <h2 className='text-4xl font-bold ml-auto'>Tools</h2>
-            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-4'>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-8'>
                 {
                     parts?.map(part => <Part
                         key={part._id}

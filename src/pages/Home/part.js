@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const part = ({ part }) => {
+    // const navigate = useNavigate();
+    // const handleBookOrder = () => {
+    //     navigate('/bookorder')
+    // }
+    // const navigate = useNavigate()
     return (
         <div>
             <div class="card bg-base-100 shadow-xl">
@@ -14,7 +20,7 @@ const part = ({ part }) => {
                     <p>Available: {part.available_quantity} pc</p>
                     <p>Short Description : {part.short_description}</p>
                     <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-primary">Book Order</button>
                     </div>
                 </div>
             </div>
