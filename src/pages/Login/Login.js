@@ -103,7 +103,7 @@ const Login = () => {
                         {errorMsg}
                         <input className='btn w-full max-w-xs text-white' type="submit" value='Login' />
                     </form>
-                    <p><small>New to doctors portal? <Link className='text-primary' to="/register">Please register</Link></small></p>
+                    <p><small>New to SAWARI SPARK ? <Link className='text-primary' to="/register">Please register</Link></small></p>
                     <div class="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
