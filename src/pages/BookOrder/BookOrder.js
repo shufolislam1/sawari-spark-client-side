@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const BookOrder = () => {
+    const {sparkId} = useParams()
+
+    const [singelSpark, setSingelSpark] = useState({})
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/spark/${sparkId}`)
+        .then(res => res.json())
+        .then(data => setSingelSpark(data))
+    }, [sparkId])
     return (
         <div>
-            <h2>bookorder</h2>
+            <h2>{singelSpark.name}</h2>
         </div>
     );
 };

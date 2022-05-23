@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const part = ({ part }) => {
+const Part = ({ part }) => {
+    const navigate = useNavigate()
+const handleBookOrder = (sparkId) => {
+    navigate(`/spark/${sparkId}`)
+}
 
     return (
         <div>
@@ -15,7 +20,7 @@ const part = ({ part }) => {
                     <p>Available: {part.available_quantity} pc</p>
                     <p>Short Description : {part.short_description}</p>
                     <div class="card-actions">
-                        <button class="btn btn-primary">Book Order</button>
+                        <button onClick={() => handleBookOrder((part._id))} class="btn btn-primary">Book Order</button>
                     </div>
                 </div>
             </div>
@@ -23,4 +28,4 @@ const part = ({ part }) => {
     );
 };
 
-export default part;
+export default Part;
