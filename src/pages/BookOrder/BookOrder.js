@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 
 const BookOrder = () => {
     const {sparkId} = useParams()
+    // const {id} = useParams()
+    // console.log(id);
 
     const [singelSpark, setSingelSpark] = useState({})
 
@@ -10,7 +12,7 @@ const BookOrder = () => {
         fetch(`http://localhost:5000/spark/${sparkId}`)
         .then(res => res.json())
         .then(data => setSingelSpark(data))
-    }, [sparkId])
+    }, [])
     return (
         <div>
             <h2>{singelSpark.name}</h2>

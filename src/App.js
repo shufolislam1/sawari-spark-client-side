@@ -17,6 +17,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/bookorder' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
+        <Route path='/spark/:sparkId' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
       </Routes>
     </div>
   );

@@ -6,6 +6,7 @@ const Header = () => {
         <li><Link to='/home'>Home</Link></li>
         {/* <li><Link to='/About'>About</Link></li> */}
         <li><Link to='/reviews'>Reviews</Link></li>
+        {/* got to our head company .Sawari.plese visit for bike. */}
         {/* <li><Link to='/contactus'>Contact Us</Link></li> */}
         <li><Link to='/bookorder'>Book Order</Link></li>
         <li><Link to='/register'>Register</Link></li>
