@@ -16,22 +16,22 @@ const Register = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    // const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate()
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = async data => {
         console.log(data)
         await signInWithEmailAndPassword(data.email, data.Password)
-        await updateProfile({ displayName: data.name });
+        // await updateProfile({ displayName: data.name });
         navigate('/home')
     };
     if (loading || gLoading) {
         return <Loading></Loading>
     }
     let signInError;
-    if (error || gError || updateError) {
-        signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
+    if (error || gError ) {
+        signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
     }
     return (
         <div className='flex justify-center items-center h-screen'>

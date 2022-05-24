@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 const AddReview = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data) =>{ 
+    const onSubmit = (data) => {
         console.log(data)
 
         // send data to server
@@ -15,18 +15,22 @@ const AddReview = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then (result => {
-            console.log(result);
-        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                alert('Successfully added review')
+                data.target.reset();
+            })
     };
     return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("description")} />
-                <input type="number" {...register("ratings", { min: 1, max: 5 })} />
-                <input type="submit" value="Add Spark" />
-            </form>
+        <div className='divide-y-4 divide-slate-400/25'>
+            <div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input {...register("description")} />
+                    <input type="number" {...register("ratings", { min: 1, max: 5 })} />
+                    <input type="submit" value="Add Spark" />
+                </form>
+            </div>
         </div>
     );
 };
