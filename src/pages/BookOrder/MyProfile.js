@@ -41,12 +41,12 @@ const MyProfile = () => {
                 </div>
             </div>
             <div  class="card w-96 bg-base-100 shadow-xl mt-5">
-                <h2>Add</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input {...register("education")} />
-                    <input {...register("location")} />
-                    <input type="number" {...register("phone")} />
-                    <input type="submit" value="Add Info" />
+                <h2 className='p-4 font-bold'>Add</h2>
+                <form className='p-4' onSubmit={handleSubmit(onSubmit)}>
+                    <input placeholder='Education' {...register("education")} />
+                    <input className='my-3' placeholder='Location' {...register("location")} />
+                    <input placeholder='Phone No.' type="number" {...register("phone")} />
+                    <input  className='btn btn-dark btn-sm ml-5' type="submit" value="Add Info" />
                 </form>
             </div>
             <UpdateUser></UpdateUser>
