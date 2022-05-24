@@ -25,8 +25,8 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/bookorder' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
-            <Route index element={<MyProfile></MyProfile>}></Route>
-            <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
+            <Route index element={<MyOrders></MyOrders>}></Route>
+            <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
             <Route path='addreview' element={<AddReview></AddReview>}></Route>
         </Route>
         <Route path='/spark/:sparkId' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>

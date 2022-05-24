@@ -1,16 +1,15 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
 
 const UpdateUser = () => {
     const { register, handleSubmit } = useForm();
-    const {userId} = useParams()
+
 
     const onSubmit = (data) => {
         console.log(data)
 
         // send data to server
-        const url = `http://localhost:5000/info/${userId}`
+        const url = `http://localhost:5000/info`
         fetch(url, {
             method: 'PUT',
             headers: {
