@@ -1,25 +1,18 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import auth from '../../firebase.init';
-import UpdateUser from './UpdateUser';
+import { useParams } from 'react-router-dom';
 
-const MyProfile = () => {
-    const [user] = useAuthState(auth);
+const UpdateUser = () => {
     const { register, handleSubmit } = useForm();
-
-
-    // const educationRef = useRef('')
-    // const locationRef = useRef('')
-    // const phoneRef = useRef('')
+    const {userId} = useParams()
 
     const onSubmit = (data) => {
         console.log(data)
 
         // send data to server
-        const url = `http://localhost:5000/info`
+        const url = `http://localhost:5000/info/${userId}`
         fetch(url, {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
@@ -34,14 +27,8 @@ const MyProfile = () => {
     };
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">{user?.displayName}</h2>
-                    <h2 class="card-title">{user?.email}</h2>
-                </div>
-            </div>
-            <div  class="card w-96 bg-base-100 shadow-xl mt-5">
-                <h2>Add</h2>
+            <div class="card w-96 bg-base-100 shadow-xl mt-5">
+                <h2>Update</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("education")} />
                     <input {...register("location")} />
@@ -49,9 +36,8 @@ const MyProfile = () => {
                     <input type="submit" value="Add Info" />
                 </form>
             </div>
-            <UpdateUser></UpdateUser>
         </div>
     );
 };
 
-export default MyProfile;
+export default UpdateUser;
