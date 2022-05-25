@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import MyOrder from './MyOrder';
 
 const MyOrders = () => {
     const [myOrders, setMyOrders] = useState({})
+    console.log(myOrders);
 
     useEffect(() => {
         fetch('http://localhost:5000/spark')
@@ -10,7 +12,13 @@ const MyOrders = () => {
     }, [])
     return (
         <div>
-            <h2>my orders: {myOrders.length}</h2>
+            {/* {
+                myOrders?.map(singelOrder => <MyOrder
+                    key={singelOrder._id}
+                    singelOrder={singelOrder}
+                ></MyOrder>)
+            } */}
+            {/* console.log(my); */}
         </div>
     );
 };

@@ -61,7 +61,7 @@ const BookOrder = () => {
 
                 {errors?.minOrder?.type === 'min' && <span className="label-text-alt text-red-500">{errors.minOrder.message}</span>}
                 {errors?.minOrder?.type === 'max' && <span className="label-text-alt text-red-500">{errors.minOrder.message}</span>}
-
+                
                 <input className='btn btn-dark btn-sm ml-5' type="submit" value="Book order" />
             </form>
         </div>

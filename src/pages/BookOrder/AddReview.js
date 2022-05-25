@@ -4,10 +4,9 @@ import { useForm } from 'react-hook-form';
 const AddReview = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        console.log(data)
 
         // send data to server
-        const url = `http://localhost:5000/info`
+        const url = `http://localhost:5000/review`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -19,7 +18,6 @@ const AddReview = () => {
             .then(result => {
                 console.log(result);
                 alert('Successfully added review')
-                data.target.reset();
             })
     };
     return (
