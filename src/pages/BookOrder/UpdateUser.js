@@ -9,7 +9,7 @@ const UpdateUser = () => {
         console.log(data)
 
         // send data to server
-        const url = `http://localhost:5000/info`
+        const url = `http://localhost:5000/spark`
         fetch(url, {
             method: 'PUT',
             headers: {

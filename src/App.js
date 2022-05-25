@@ -23,7 +23,7 @@ function App() {
         <Route path='/reviews' element={<Reviews></Reviews>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/bookorder' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
+        {/* <Route path='/bookorder' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route> */}
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>

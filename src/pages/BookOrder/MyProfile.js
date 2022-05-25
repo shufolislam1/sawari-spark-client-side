@@ -29,7 +29,6 @@ const MyProfile = () => {
             .then(result => {
                 console.log(result);
                 alert('Successfully added review')
-                // data.target.reset();
             })
     };
     return (
