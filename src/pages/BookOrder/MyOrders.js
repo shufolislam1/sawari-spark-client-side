@@ -2,24 +2,22 @@ import React, { useEffect, useState } from 'react';
 import MyOrder from './MyOrder';
 
 const MyOrders = () => {
-    const [myOrders, setMyOrders] = useState({})
+    const [myOrders, setMyOrders] = useState([])
     console.log(myOrders);
 
     useEffect(() => {
-        fetch('http://localhost:5000/spark')
+        fetch('http://localhost:5000/order')
         .then(res => res.json())
         .then(data => setMyOrders(data))
     }, [])
     return (
-        <div>
-            {/* {
+        <div className='grid grid-cols-2 gap-4'>
+            {
                 myOrders?.map(singelOrder => <MyOrder
                     key={singelOrder._id}
                     singelOrder={singelOrder}
                 ></MyOrder>)
-            } */}
-            {/* console.log(my); */}
-            {/* <h2>{myOrders.map(singelOrder => <MyOrder></MyOrder>)}</h2> */}
+            }
         </div>
     );
 };

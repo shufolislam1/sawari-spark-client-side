@@ -54,6 +54,8 @@ const BookOrder = () => {
 
                 <input disabled className='my-3' {...register("email")} defaultValue={user?.email} />
 
+                <input placeholder='Product Name' defaultValue={singelSpark.name} className='my-2' {...register("productName", { required: true })} />
+
                 <input placeholder='Adress' {...register("address", { required: true })} />
 
                 <input className='my-3' placeholder='Phone' {...register("phone", { required: true })} />
