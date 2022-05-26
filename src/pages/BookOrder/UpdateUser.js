@@ -32,7 +32,7 @@ const UpdateUser = () => {
                     <input placeholder='Education' {...register("education")} />
                     <input  className='my-3' placeholder='Location' {...register("location")} />
                     <input placeholder='Phone No.' type="number" {...register("phone")} />
-                    <input className='btn btn-dark btn-sm ml-5' type="submit" value="Add Info" />
+                    <input className='btn btn-dark btn-sm ml-5' type="submit" value="Update Info" />
                 </form>
             </div>
         </div>

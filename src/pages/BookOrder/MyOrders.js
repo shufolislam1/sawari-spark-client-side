@@ -19,6 +19,7 @@ const MyOrders = () => {
                 ></MyOrder>)
             } */}
             {/* console.log(my); */}
+            {/* <h2>{myOrders.map(singelOrder => <MyOrder></MyOrder>)}</h2> */}
         </div>
     );
 };

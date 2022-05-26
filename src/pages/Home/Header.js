@@ -19,6 +19,8 @@ const Header = () => {
         <li>{user? <Link to='/dashboard'>Dashboard</Link>: <Link to='/register'>Register</Link>}</li>
         {/* <li><Link to='/login'>Login</Link></li> */}
         <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <li><Link to='/blog'>Blog</Link></li>
+
     </>
     return (
         <div class="navbar  bg-neutral text-neutral-content">
