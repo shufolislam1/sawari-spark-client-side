@@ -15,7 +15,7 @@ const Reviews = () => {
     return (
         <div className='grid'>
             <h2 className='text-4xl font-bold justify-self-center mt-4'>Reviews</h2>
-            <div className='grid grid-cols-2 gap-4 my-8'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-4 my-8'>
                 {
                     reviews?.map(singelReview => <SingelReview
                         key={singelReview._id}

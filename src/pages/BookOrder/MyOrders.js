@@ -11,7 +11,7 @@ const MyOrders = () => {
         .then(data => setMyOrders(data))
     }, [])
     return (
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-4'>
             {
                 myOrders?.map(singelOrder => <MyOrder
                     key={singelOrder._id}

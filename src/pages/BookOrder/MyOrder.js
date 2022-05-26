@@ -5,15 +5,11 @@ const MyOrder = ({singelOrder}) => {
     return (
         <div>
             <div class="card bg-base-100 shadow-xl">
-                {/* <figure class="px-10 pt-10">
-                    <img src={singelOrder.img} alt="Shoes" class="rounded-xl" />
-                </figure> */}
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">{singelOrder.productName}</h2>
-                    <h2 class="card-title">{singelOrder.minOrder}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 class="card-title">Product Name: {singelOrder.productName}</h2>
+                    <h2 class="card-title">Order Quantity: {singelOrder.minOrder} pc</h2>
                     <div class="card-actions">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-dark mt-3">Pay Now</button>
                     </div>
                 </div>
             </div>

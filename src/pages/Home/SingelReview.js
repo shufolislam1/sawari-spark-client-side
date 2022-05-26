@@ -6,7 +6,7 @@ const SingelReview = ({ singelReview }) => {
             <div class="card bg-base-100 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Description: {singelReview.description}</h2>
-                    <p>{singelReview.ratings}</p>
+                    <p>Ratings: {singelReview.ratings} out of 5</p>
                 </div>
             </div>
         </div>

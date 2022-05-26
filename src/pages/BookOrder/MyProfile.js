@@ -1,21 +1,20 @@
-import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import auth from '../../firebase.init';
+import MyProfileInfo from './MyProfileInfo';
 import UpdateUser from './UpdateUser';
 
 const MyProfile = () => {
-    const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
+    const [addInfo, setAddInfo] = useState([])
 
-
-    // const educationRef = useRef('')
-    // const locationRef = useRef('')
-    // const phoneRef = useRef('')
+    useEffect( () => {
+        fetch(`http://localhost:5000/info`)
+        .then(res => res.json())
+        .then(data => setAddInfo(data))
+    } ,[])
 
     const onSubmit = (data) => {
-        console.log(data)
 
         // send data to server
         const url = `http://localhost:5000/info`
@@ -34,12 +33,12 @@ const MyProfile = () => {
     };
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">{user?.displayName}</h2>
-                    <h2 class="card-title">{user?.email}</h2>
-                </div>
-            </div>
+            {
+                addInfo?.map(add => <MyProfileInfo
+                    key={add._id}
+                    add={add}
+                ></MyProfileInfo>)
+            }
             <div  class="card w-96 bg-base-100 shadow-xl mt-5">
                 <h2 className='p-4 font-bold'>Add</h2>
                 <form className='p-4' onSubmit={handleSubmit(onSubmit)}>
