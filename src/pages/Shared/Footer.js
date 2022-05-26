@@ -30,6 +30,11 @@ const Footer = () => {
                     <p>Copyright © 2022 - All right reserved by SAWARI SPARK Industries Ltd</p>
                 </div>
             </footer>
+            <footer class="footer footer-center p-4 bg-neutral text-neutral-content">
+                <div>
+                    <p>Developed By - S. M. Shufol Islam</p>
+                </div>
+            </footer>
         </div>
     );
 };

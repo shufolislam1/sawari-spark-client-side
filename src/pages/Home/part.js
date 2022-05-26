@@ -9,7 +9,7 @@ const handleBookOrder = (sparkId) => {
 
     return (
         <div>
-            <div class="card bg-base-100 shadow-xl">
+            <div class="card bg-base-100 shadow-md">
                 <figure class="px-10 pt-10">
                     <img src={part.img} alt="Shoes" class="rounded-xl" />
                 </figure>
@@ -20,7 +20,7 @@ const handleBookOrder = (sparkId) => {
                     <p>Available: {part.available_quantity} pc</p>
                     <p>Short Description : {part.short_description}</p>
                     <div class="card-actions">
-                        <button onClick={() => handleBookOrder((part._id))} class="btn btn-primary">Book Order</button>
+                        <button onClick={() => handleBookOrder((part._id))} class="btn btn-dark mt-3">Book Order</button>
                     </div>
                 </div>
             </div>

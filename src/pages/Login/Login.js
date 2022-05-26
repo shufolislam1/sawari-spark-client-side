@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 import auth from '../../firebase.init';
+// import useToken from '../../hooks/UseToken';
 
 const Login = () => {
 
@@ -16,6 +17,8 @@ const Login = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, updteError] = useUpdateProfile(auth);
+    // const [token] = useToken(user || gUser)
+
     const navigate = useNavigate()
 
     let errorMsg;
