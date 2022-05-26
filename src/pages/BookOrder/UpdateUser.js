@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const UpdateUser = () => {
     const { register, handleSubmit } = useForm();
@@ -20,7 +21,7 @@ const UpdateUser = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                alert('Successfully added review')
+                toast.success('Successfully added review')
                 // data.target.reset();
             })
     };

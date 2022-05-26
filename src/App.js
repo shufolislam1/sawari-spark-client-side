@@ -13,6 +13,8 @@ import Login from './pages/Login/Login';
 import Register from './pages/Login/Register';
 import RequireAuth from './pages/Login/RequireAuth'
 import PageNotFound from './pages/Shared/PageNotFound';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
         <Route path='/spark/:sparkId' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

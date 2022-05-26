@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import UpdateUser from './UpdateUser';
 
@@ -28,7 +29,7 @@ const MyProfile = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                alert('Successfully added review')
+                toast.success('Successfully added Info')
             })
     };
     return (
