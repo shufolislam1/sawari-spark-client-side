@@ -43,8 +43,8 @@ const BookOrder = () => {
                 <div class="card-body">
                     <h2 class="card-title">Product Name: {singelSpark.name}</h2>
                     <h2 class="card-title">Price: {singelSpark.price_per_unit}</h2>
-                    <p>Minimum Order: {singelSpark.minimum_order_quantity} pc</p>
-                    <p>Available: {singelSpark.available_quantity} pc</p>
+                    <p className='text-amber-400 text-2xl font-bold'>Minimum Order: {singelSpark.minimum_order_quantity} pc</p>
+                    <p className='text-amber-400 text-2xl font-bold'>Available: {singelSpark.available_quantity} pc</p>
                     <p>Short Description : {singelSpark.short_description}</p>
                 </div>
             </div>
