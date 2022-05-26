@@ -27,7 +27,7 @@ const UpdateUser = () => {
     };
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl mt-5">
+            <div class="card w-96 bg-base-100 shadow-xl my-5">
                 <h2 className='p-4 font-bold'>Update</h2>
                 <form className='p-4' onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder='Education' {...register("education")} />

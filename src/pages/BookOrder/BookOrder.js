@@ -52,7 +52,7 @@ const BookOrder = () => {
             <form className='w-50 mx-autocard card-compact w-96 bg-base-100 shadow-xl justify-self-center my-16 p-4' onSubmit={handleSubmit(onSubmit)}>
                 <input disabled {...register("name")} defaultValue={user?.displayName} />
 
-                <input disabled className='my-3' {...register("email")} defaultValue={user?.email} />
+                <input className='my-3' {...register("email")} defaultValue={user?.email} />
 
                 <input placeholder='Product Name' defaultValue={singelSpark.name} className='my-2' {...register("productName", { required: true })} />
 

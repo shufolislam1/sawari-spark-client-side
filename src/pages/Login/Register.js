@@ -29,17 +29,12 @@ const Register = () => {
         console.log(data)
         await createUserWithEmailAndPassword(data.email, data.Password)
         await updateProfile({ displayName: data.name });
-        // navigate('/home')
     };
     if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
-    if (user || gUser) {
-        return (
-          <div>
-            <p>Registered User: {user.email}</p>
-          </div>
-        );
+    if (token) {
+        navigate('/home')
       }
     let signInError;
     if (error || gError || updateError ) {

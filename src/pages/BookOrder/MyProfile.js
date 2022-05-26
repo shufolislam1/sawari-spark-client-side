@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 import MyProfileInfo from './MyProfileInfo';
 import UpdateUser from './UpdateUser';
 
 const MyProfile = () => {
     const { register, handleSubmit } = useForm();
     const [addInfo, setAddInfo] = useState([])
+    console.log(addInfo);
+    const [user] = useAuthState(auth)
 
-    useEffect( () => {
-        fetch(`http://localhost:5000/info`)
-        .then(res => res.json())
-        .then(data => setAddInfo(data))
-    } ,[])
+    useEffect(() => {
+        fetch(`http://localhost:5000/info?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data => setAddInfo(data))
+    }, [user])
 
     const onSubmit = (data) => {
 
@@ -39,13 +43,14 @@ const MyProfile = () => {
                     add={add}
                 ></MyProfileInfo>)
             }
-            <div  class="card w-96 bg-base-100 shadow-xl mt-5">
+            <div class="card w-96 bg-base-100 shadow-xl mt-5">
                 <h2 className='p-4 font-bold'>Add</h2>
                 <form className='p-4' onSubmit={handleSubmit(onSubmit)}>
+                    <input className='my-3' {...register("email")} defaultValue={user?.email} />
                     <input placeholder='Education' {...register("education")} />
                     <input className='my-3' placeholder='Location' {...register("location")} />
                     <input placeholder='Phone No.' type="number" {...register("phone")} />
-                    <input  className='btn btn-dark btn-sm ml-5' type="submit" value="Add Info" />
+                    <input className='btn btn-dark btn-sm ml-5' type="submit" value="Add Info" />
                 </form>
             </div>
             <UpdateUser></UpdateUser>

@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import MyOrder from './MyOrder';
 
 const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([])
+    const [user] = useAuthState(auth)
     console.log(myOrders);
 
     useEffect(() => {
-        fetch('http://localhost:5000/order')
-        .then(res => res.json())
-        .then(data => setMyOrders(data))
-    }, [])
+        if(user){
+            fetch(`http://localhost:5000/order?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data => setMyOrders(data))
+        }
+    }, [user])
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-4'>
             {
