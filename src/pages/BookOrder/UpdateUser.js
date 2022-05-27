@@ -1,16 +1,19 @@
 import React from 'react';
+// import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+// import auth from '../../firebase.init';
 
 const UpdateUser = () => {
     const { register, handleSubmit } = useForm();
+    // const [user] = useAuthState(auth)
 
 
     const onSubmit = (data) => {
         console.log(data)
 
         // send data to server
-        const url = `http://localhost:5000/spark`
+        const url = `http://localhost:5000/info`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -21,7 +24,7 @@ const UpdateUser = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                toast.success('Successfully added review')
+                toast.success('Successfully updated Info')
                 // data.target.reset();
             })
     };
