@@ -13,7 +13,12 @@ const MyProfile = () => {
     const [user] = useAuthState(auth)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/info?email=${user?.email}`)
+        fetch(`http://localhost:5000/info?email=${user?.email}`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setAddInfo(data))
     }, [user])
