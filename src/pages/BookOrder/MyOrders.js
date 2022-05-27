@@ -12,9 +12,9 @@ const MyOrders = () => {
         if(user){
             fetch(`http://localhost:5000/order?email=${user?.email}`, {
                 method:'GET',
-                headers: {
-                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                }
+                // headers: {
+                //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                // }
             })
             .then(res => res.json())
             .then(data => setMyOrders(data))
@@ -22,12 +22,12 @@ const MyOrders = () => {
     }, [user])
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-4'>
-            {
+            {/* {
                 myOrders?.map(singelOrder => <MyOrder
                     key={singelOrder._id}
                     singelOrder={singelOrder}
                 ></MyOrder>)
-            }
+            } */}
         </div>
     );
 };

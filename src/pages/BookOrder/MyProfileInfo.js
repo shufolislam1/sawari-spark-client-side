@@ -7,7 +7,7 @@ const MyProfileInfo = ({ add }) => {
 
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl mt-5">
+            <div class="card bg-base-100 shadow-xl mt-5">
                 <h2 className='p-4 font-bold'>Save Your Info</h2>
                 <div class="card-body">
                     <h2 class="card-title">Name:   {user?.displayName}</h2>

@@ -12,13 +12,8 @@ const Header = () => {
       };
     const menuItems = <>
         <li><Link to='/home'>Home</Link></li>
-        {/* <li><Link to='/About'>About</Link></li> */}
         <li><Link to='/reviews'>Reviews</Link></li>
-        {/* got to our head company .Sawari.plese visit for bike. */}
-        {/* <li><Link to='/contactus'>Contact Us</Link></li> */}
-        {/* <li><Link to='/bookorder'>Book Order</Link></li> */}
         <li>{user? <Link to='/dashboard'>Dashboard</Link>: <Link to='/register'>Register</Link>}</li>
-        {/* <li><Link to='/login'>Login</Link></li> */}
         <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         <li><Link to='/blog'>Blog</Link></li>
 
