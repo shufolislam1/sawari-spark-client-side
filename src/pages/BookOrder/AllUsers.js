@@ -5,13 +5,22 @@ import UserRow from './UserRow';
 
 const AllUsers = () => {
     // const[allUser, setAllUser] = useState([])
-    const { data: users, isLoading } = useQuery('users', () => fetch(`http://localhost:5000/user`).then(res => res.json()))
+    const { data: users, isLoading } = useQuery('users', () => fetch(`http://localhost:5000/user`
+    // , 
+    // {
+    //     method: 'GET',
+    //     headers: {
+    //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
+    //     }
+    // }
+    ).then(res => res.json()))
+    console.log(users);
     if (isLoading) {
         return <Loading></Loading>
     }
     return (
         <div>
-            <h2>all users: {users.length}</h2>
+            {/* <h2>all users: {users.length}</h2> */}
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>

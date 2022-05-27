@@ -35,9 +35,10 @@ const Register = () => {
     }
     if (token) {
         navigate('/home')
-      }
+    }
+
     let signInError;
-    if (error || gError || updateError ) {
+    if (error || gError || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
     }
     return (

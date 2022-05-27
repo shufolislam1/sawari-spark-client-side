@@ -17,12 +17,13 @@ const Login = () => {
 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, updteError] = useUpdateProfile(auth);
+
     const [token] = useToken(user || gUser)
 
     const navigate = useNavigate()
 
     let errorMsg;
-    if (error || gError) {
+    if (error || gError || updteError) {
         errorMsg = <p className='text-red-500'><small>{error?.message || gError?.message} </small></p>
     }
 
@@ -43,6 +44,7 @@ const Login = () => {
     if (token) {
         navigate(from, { replace: true });
     }
+
     return (
         <div className='flex justify-center items-center h-screen'>
             <div  class="card bg-base-100 shadow-xl">

@@ -5,8 +5,8 @@ const UserRow = ({user}) => {
         <tr>
         <th>1</th>
         <td>{user.email}</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
+        <td><button class="btn btn-xs">Make Admin</button></td>
+        <td><button class="btn btn-xs">Remove User</button></td>
     </tr>
     );
 };
