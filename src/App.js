@@ -16,6 +16,7 @@ import PageNotFound from './pages/Shared/PageNotFound';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AllUsers from './pages/BookOrder/AllUsers';
+import Payment from './pages/BookOrder/Payment';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
             <Route path='addreview' element={<AddReview></AddReview>}></Route>
+            <Route path='payment/:id' element={<Payment></Payment>}></Route>
             <Route path='users' element={<AllUsers></AllUsers>}></Route>
         </Route>
         <Route path='/spark/:sparkId' element={<RequireAuth><BookOrder></BookOrder></RequireAuth>}></Route>
