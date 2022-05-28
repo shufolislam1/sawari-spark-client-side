@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MyOrder = ({singelOrder}) => {
-    console.log(singelOrder);
+    // console.log(singelOrder);
     return (
         <div>
             <div class="card bg-base-100 shadow-xl">

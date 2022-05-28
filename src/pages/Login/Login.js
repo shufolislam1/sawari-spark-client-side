@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -32,18 +32,25 @@ const Login = () => {
         console.log(data)
         await signInWithEmailAndPassword(data.email, data.Password)
         await updateProfile({ displayName: data.name });
-        navigate('/home')
+        // navigate('/home')
     };
 
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
+    useEffect( () =>{
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
+
+
     if (loading || gLoading) {
         return <Loading></Loading>
     }
-    if (token) {
-        navigate(from, { replace: true });
-    }
+    // if (token) {
+    //     navigate(from, { replace: true });
+    // }
 
     return (
         <div className='flex justify-center items-center h-screen'>

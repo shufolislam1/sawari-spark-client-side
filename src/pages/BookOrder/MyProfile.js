@@ -9,15 +9,16 @@ import UpdateUser from './UpdateUser';
 const MyProfile = () => {
     const { register, handleSubmit } = useForm();
     const [addInfo, setAddInfo] = useState([])
-    console.log(addInfo);
+    // console.log(addInfo);
     const [user] = useAuthState(auth)
 
     useEffect(() => {
         fetch(`http://localhost:5000/info?email=${user?.email}`, {
-            method: 'GET',
-            headers: {
-                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            }
+            method: 'GET'
+            // ,
+            // headers: {
+            //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            // }
         })
             .then(res => res.json())
             .then(data => setAddInfo(data))

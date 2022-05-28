@@ -5,16 +5,16 @@ import UserRow from './UserRow';
 
 const AllUsers = () => {
     // const[allUser, setAllUser] = useState([])
-    const { data: users, isLoading } = useQuery('users', () => fetch(`http://localhost:5000/user`
-    // , 
-    // {
-    //     method: 'GET',
-    //     headers: {
-    //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    //     }
-    // }
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/user`
+    , 
+    {
+        method: 'GET'
+        // ,
+        // headers: {
+        //     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        // }
+    }
     ).then(res => res.json()))
-    console.log(users);
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -26,9 +26,9 @@ const AllUsers = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Email</th>
+                            <th>Make Admin</th>
+                            <th>Remove User</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +36,7 @@ const AllUsers = () => {
                             users.map(user => <UserRow
                                 key={user._id}
                                 user={user}
+                                refetch={refetch}
                             ></UserRow>)
                         }
                     </tbody>
