@@ -14,7 +14,7 @@ const BookOrder = () => {
         console.log(data)
 
         // send data to server
-        const url = `http://localhost:5000/order`
+        const url = `https://lit-sands-04163.herokuapp.com/order`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -32,7 +32,7 @@ const BookOrder = () => {
     const [singelSpark, setSingelSpark] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/spark/${sparkId}`)
+        fetch(`https://lit-sands-04163.herokuapp.com/spark/${sparkId}`)
             .then(res => res.json())
             .then(data => setSingelSpark(data))
     }, [sparkId])

@@ -10,7 +10,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if(user){
-            fetch(`http://localhost:5000/order?email=${user?.email}`
+            fetch(`https://lit-sands-04163.herokuapp.com/order?email=${user?.email}`
             // , 
             // {
             //     method:'GET',

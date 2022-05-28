@@ -13,7 +13,7 @@ const UpdateUser = () => {
         console.log(data)
 
         // send data to server
-        const url = `http://localhost:5000/info`
+        const url = `https://lit-sands-04163.herokuapp.com/info`
         fetch(url, {
             method: 'PUT',
             headers: {

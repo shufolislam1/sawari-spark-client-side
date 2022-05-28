@@ -5,7 +5,7 @@ const Parts = () => {
     const [parts, setParts] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5000/spark')
+        fetch('https://lit-sands-04163.herokuapp.com/spark')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])

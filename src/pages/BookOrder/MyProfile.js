@@ -13,7 +13,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/info?email=${user?.email}`, {
+        fetch(`https://lit-sands-04163.herokuapp.com/info?email=${user?.email}`, {
             method: 'GET'
             // ,
             // headers: {
@@ -27,7 +27,7 @@ const MyProfile = () => {
     const onSubmit = (data) => {
 
         // send data to server
-        const url = `http://localhost:5000/info`
+        const url = `https://lit-sands-04163.herokuapp.com/info`
         fetch(url, {
             method: 'POST',
             headers: {

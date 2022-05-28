@@ -7,7 +7,7 @@ const AddReview = () => {
     const onSubmit = (data) => {
 
         // send data to server
-        const url = `http://localhost:5000/review`
+        const url = `https://lit-sands-04163.herokuapp.com/review`
         fetch(url, {
             method: 'POST',
             headers: {
