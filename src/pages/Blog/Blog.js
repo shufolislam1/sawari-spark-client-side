@@ -5,7 +5,7 @@ const Blog = () => {
         <div>
 
             <div className='card shadow-xl p-6 m-6'>
-                <h2>Q1: How will you improve the performance of a React Application?</h2>
+                <h2>Q1: How will you improve the performance of a React Application? ? ?</h2>
                 <h1>Ans: i have to create component state local where necessary and memorize react components to prevent unnecessary re-render.Also i can stop lazy loadnig images in react.There are many ways to improve the performance of react app.</h1>
             </div>
 
