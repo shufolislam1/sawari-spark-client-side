@@ -10,7 +10,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if(user){
-            fetch(`https://lit-sands-04163.herokuapp.com/order?email=${user?.email}`
+            fetch(`sawari-spark.up.railway.app/order?email=${user?.email}`
             // , 
             // {
             //     method:'GET',

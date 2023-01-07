@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 
 const AllUsers = () => {
     // const[allUser, setAllUser] = useState([])
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://lit-sands-04163.herokuapp.com/user`
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`sawari-spark.up.railway.app/user`
     , 
     {
         method: 'GET'

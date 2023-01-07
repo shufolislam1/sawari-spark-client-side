@@ -14,7 +14,7 @@ const BookOrder = () => {
         console.log(data)
 
         // send data to server
-        const url = `https://lit-sands-04163.herokuapp.com/order`
+        const url = `sawari-spark.up.railway.app/order`
         fetch(url, {
             method: 'POST',
             headers: {
