@@ -13,7 +13,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth)
 
     useEffect(() => {
-        fetch(`sawari-spark.up.railway.app/info?email=${user?.email}`, {
+        fetch(`https://sawari-spark.up.railway.app/info?email=${user?.email}`, {
             method: 'GET'
             // ,
             // headers: {
@@ -27,7 +27,7 @@ const MyProfile = () => {
     const onSubmit = (data) => {
 
         // send data to server
-        const url = `sawari-spark.up.railway.app/info`
+        const url = `https://sawari-spark.up.railway.app/info`
         fetch(url, {
             method: 'POST',
             headers: {

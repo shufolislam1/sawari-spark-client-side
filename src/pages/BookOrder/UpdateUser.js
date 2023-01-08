@@ -13,7 +13,7 @@ const UpdateUser = () => {
         console.log(data)
 
         // send data to server
-        const url = `sawari-spark.up.railway.app/info`
+        const url = `https://sawari-spark.up.railway.app/info`
         fetch(url, {
             method: 'PUT',
             headers: {

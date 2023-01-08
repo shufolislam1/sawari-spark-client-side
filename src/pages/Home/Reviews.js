@@ -6,7 +6,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`sawari-spark.up.railway.app/review`)
+        fetch(`https://sawari-spark.up.railway.app/review`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data);

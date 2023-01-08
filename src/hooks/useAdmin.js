@@ -6,7 +6,7 @@ const useAdmin = (user) => {
     useEffect( () => {
         const email = user?.email;
         if(email){
-            fetch(`sawari-spark.up.railway.app/admin/${email}`, {
+            fetch(`https://sawari-spark.up.railway.app/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

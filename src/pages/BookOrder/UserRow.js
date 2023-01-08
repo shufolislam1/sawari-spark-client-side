@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 
 const UserRow = ({ user, refetch }) => {
     const makeAdmin = () => {
-        fetch(`sawari-spark.up.railway.app/user/admin/${user?.email}`, {
+        fetch(`https://sawari-spark.up.railway.app/user/admin/${user?.email}`, {
             method: 'PUT'
             // ,
             // headers: {

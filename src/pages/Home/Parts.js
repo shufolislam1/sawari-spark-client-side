@@ -5,7 +5,7 @@ const Parts = () => {
     const [parts, setParts] = useState()
 
     useEffect(() => {
-        fetch('sawari-spark.up.railway.app/spark')
+        fetch('https://sawari-spark.up.railway.app/spark')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])

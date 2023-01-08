@@ -10,7 +10,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if(user){
-            fetch(`sawari-spark.up.railway.app/order?email=${user?.email}`
+            fetch(`https://sawari-spark.up.railway.app/order?email=${user?.email}`
             // , 
             // {
             //     method:'GET',

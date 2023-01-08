@@ -14,7 +14,7 @@ const BookOrder = () => {
         console.log(data)
 
         // send data to server
-        const url = `sawari-spark.up.railway.app/order`
+        const url = `https://sawari-spark.up.railway.app/order`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -32,7 +32,7 @@ const BookOrder = () => {
     const [singelSpark, setSingelSpark] = useState({})
 
     useEffect(() => {
-        fetch(`sawari-spark.up.railway.app/spark/${sparkId}`)
+        fetch(`https://sawari-spark.up.railway.app/spark/${sparkId}`)
             .then(res => res.json())
             .then(data => setSingelSpark(data))
     }, [sparkId])

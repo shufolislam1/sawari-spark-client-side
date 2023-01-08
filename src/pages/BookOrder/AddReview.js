@@ -7,7 +7,7 @@ const AddReview = () => {
     const onSubmit = (data) => {
 
         // send data to server
-        const url = `sawari-spark.up.railway.app/review`
+        const url = `https://sawari-spark.up.railway.app/review`
         fetch(url, {
             method: 'POST',
             headers: {
