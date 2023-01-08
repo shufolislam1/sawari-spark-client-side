@@ -32,7 +32,7 @@ const BookOrder = () => {
     const [singelSpark, setSingelSpark] = useState({})
 
     useEffect(() => {
-        fetch(`https://lit-sands-04163.herokuapp.com/spark/${sparkId}`)
+        fetch(`sawari-spark.up.railway.app/spark/${sparkId}`)
             .then(res => res.json())
             .then(data => setSingelSpark(data))
     }, [sparkId])
